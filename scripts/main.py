@@ -53,7 +53,9 @@ def construct_year_dataframe(driver, year):
     df = df.set_index('data', drop=True)
 
     return df
+
 def scrape_superanalotto(year=2023):
+
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
     list_df = []
@@ -71,3 +73,8 @@ def scrape_superanalotto(year=2023):
     driver.close()
     # final_df.to_csv('super_analotto.csv')
     return final_df
+
+
+
+
+scrape_superanalotto()
